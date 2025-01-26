@@ -251,7 +251,7 @@ The graph below illustrates the time taken by Bubble Sort for arrays of differen
    - ![image](https://github.com/user-attachments/assets/16db7af3-c731-4d72-8829-f017e92ef309)
   
    _______________________________________________________________________________________________________________
-##Conclusion
+## Conclusion
 
 Through a series of experiments, it’s clear that Insertion Sort is the most efficient and practical choice for sorting small to medium-sized datasets. It excels at handling partially sorted arrays, thanks to its straightforward approach of placing each element in its correct position with minimal swaps. This makes it faster and more suitable for situations where datasets are relatively small or nearly sorted.
 
