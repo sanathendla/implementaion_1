@@ -1,82 +1,85 @@
-# Insertion Sort Implementation
+System Specifications
+**CPU: ** Intel Core i7-9700K @ 3.60GHz
 
-This is a Python implementation of the Insertion Sort algorithm. Users can input an array size, it will then create random numbers, sort that array with Insertion Sort, and measure the performance for a few sizes.
+**RAM: ** 16 GB DDR4
 
-Here is the algorithm explanation, iteration, and result:
+Insertion Sort Implementation
+This repository contains an Insertion Sort (Python-based) algorithm. It permits the definition of the array size, generation of random numbers, and sorting of an array via Insertion Sort, as well as performance benchmarking for a family of array sizes. Appended is a description of the algorithm, number of iterations and output.
 
----
-## How It Works
-1. **What is Insertion Sort:**
-- Insertion Sort works by maintaining a sorted portion of the array. For each new element, it locates the proper place for it among the elements to its left using comparisons and shifting larger elements.
+How It Works
+**Overview of Insertion Sort: **
+Insertion Sort is implemented iteratively in a way such that the partially sorted array is built from bottom up. In case of all newly introduced elements, it precisely locates the element in the ordered region by comparing it with other left neighbors and by progressively moving all larger neighbor to the right.
 
-2. **User Input:**
-   - Users are asked for the size of the array. On input, the program comes up with random integers between 0 and 100, which are used to generate the benchmark.
+**User Input: **
+The size of the array (i.e., the maximum number of elements allowed in the array) is defined by the user and program, then integer values from the set [0,100) are randomly generated and used for array manipulation, benchmarking, and sorting.
 
-3. **Iteration Steps:**
-   - Iteration Steps are explained in detail
-     - Starting from the second element at index 1, it compares the current element with elements of the sorted section.
-     - Elements greater than the current element in the sorted section are moved one position right.
-     - The current element is placed at its correct position.
-- This process goes on until the whole array gets sorted.
+**Sorting Steps: **
+**Detailed Explanation of Iterations: **
+The transformation algorithm, according to the second (index 1) the elementwise comparison between elements of the algorithmic part and those of the ordered part is carried out.
 
-4. **Performance Evaluation:**
-   - The code measures the running time for the sorting of different sizes of arrays, such as 12, 82, and 102 elements.
-   - A graph is drawn to indicate the trend of array size and running time.
+Larger items are shifted to the right position by one position if they are present.
 
----
+The element is now in its correct location.
 
-## Running the Code
-### Input:
-```
+This process repeats until the sorted array is obtained.
+
+**Performance Measurement: **
+The scheme relates the time to generate an array of varying sizes, the sizes of arrays whose element have to be generated are 12, 82 and 102.
+
+The relationship between array size and time to process has been represented by drawing a graph.
+
+Example Execution
+Input: ### Input:
+ Copy
+
 Enter the size of array: 12
-```
+Original Array: ### Original Array:
+ Copy
 
-### Original Array:
-```
-[13, 34, 39, 42, 37, 37, 97, 33, 84, 17, 73, 47]
- 
-### Iteration Steps:
-1. **Step 1:** Put `34` in its proper place.
-  - Output: `[13, 34, 39, 42, 37, 37, 97, 33, 84, 17, 73, 47]`
-2. **Step 2:** Put `39` in its proper place.
-  - Output: `[13, 34, 39, 42, 37, 37, 97, 33, 84, 17, 73, 47]`
-3. **Round 3:** Put `42` in right place.
-   - Output: `[13, 34, 39, 42, 37, 37, 97, 33, 84, 17, 73, 47]`
-4. **Round 4:** Put `37` in right place.
-   - Output: `[13, 34, 37, 39, 42, 37, 97, 33, 84, 17, 73, 47]`
-5. **Round 5:** Put `37` in right place.
-- Output: `[13, 34, 37, 37, 39, 42, 97, 33, 84, 17, 73, 47]`
-6. **Step 6:** Put `97` at the correct position.
-   - Output: `[13, 34, 37, 37, 39, 42, 97, 33, 84, 17, 73, 47]`
-7. **Step 7:** Put `33` at the correct position.
-   - Output: `[13, 33, 34, 37, 37, 39, 42, 97, 84, 17, 73, 47]`
-8. Iteration 8: Place `84`
-       Output: `[13, 33, 34, 37, 37, 39, 42, 84, 97, 17, 73, 47]`.
-9. Iteration 9: Place `17`.
-         Output: `[13, 17, 33, 34, 37, 37, 39, 42, 84, 97, 73, 47]`.
-10. Iteration 10: Place `73` in proper location.
-- Output: `[13, 17, 33, 34, 37, 37, 39, 42, 73, 84, 97, 47]`
-11. **Iteration 11:** Insert `47` at appropriate position.
-    - Final Sorted Array: `[13, 17, 33, 34, 37, 37, 39, 42, 47, 73, 84, 97]`
+[13, 34, 39, 42, 37, 37, 97, 33, 84, 17, 73, 47].
+Step-by-Step Iterations: ### Step-by-Step Iterations:
+**Iteration 1: ** Place 34 in the correct position.
+Result: [13, 34, 39, 42, 37, 37, 97, 33, 84, 17, 73, 47].
+**Iteration 2: ** Place 39 in the correct position.
+Result: [13, 34, 39, 42, 37, 37, 97, 33, 84, 17, 73, 47].
+**Iteration 3: ** Place 42 in the correct position.
+Result: [13, 34, 39, 42, 37, 37, 97, 33, 84, 17, 73, 47] .
+**Iteration 4: ** Place 37 in the correct position.
+Result: [13, 34, 37, 39, 42, 37, 97, 33, 84, 17, 73, 47] .
+**Iteration 5: ** Place 37 in the correct position.
+Result: [13, 34, 37, 37, 39, 42, 97, 33, 84, 17, 73, 47] .
+**Iteration 6: ** Place 97 in the correct position.
+Result: [13, 34, 37, 37, 39, 42, 97, 33, 84, 17, 73, 47].
+**Iteration 7: ** Place 33 in the correct position.
+Result: [13, 33, 34, 37, 37, 39, 42, 97, 84, 17, 73, 47] .
+**Iteration 8: ** Place 84 in the correct position.
+Result: It is comprised of 13, 33, 34, 37, 37, 39, 42, 84, 97, 17, 73, 47] (e.g., M1 maps order the systems from lowest precision (C1) to highest precision (C13).
+**Iteration 9: ** Place 17 in the correct position.
+Result: 13, 17, 33, 34, 37, 37, 39, 42, 84, 97, 73, 47 .
+**Iteration 10: ** Place 73 in the correct position.
+Result: 13, 17, 33, 34, 37, 37, 39, 42, 73, 84, 97, 47.
+**Iteration 11: ** Place 47 in the correct position.
+Final Sorted Array: Range 13, 17, 33, 34, 37, 37, 39, 42, 47, 73, 84, 97.
+Execution Time for 12 Elements: ### Execution Time for 12 Elements:
+ Copy
 
-### Time Complexity for 12 Elements:
-```
-Insertion Sort Time Complexity: 0.000000000000 seconds
-```
+Insertion Sort Execution Time: 0.000000000000 seconds
+Visualization
+Graph of array sizes of 12, 82 and 102.
 
----
+The following figure shows the number of seconds needed to perform the Insertion Sort operations on sizes as arrays.
 
-## Graph
-### Graph for 12, 82, and 102 Elements
-The following graph shows the time taken by Insertion Sort for different sizes of arrays:
+**For Array Size 12: **
+Execution Time: 0.000000 seconds
 
-1. **For Array Size 12:** 
-   - Execution Time: 0.000000 seconds
-   - 
-2. **For Array Size 82:** 
-   - Execution Time: 0.000015 seconds
-   -
-3. **For Array Size 102:** 
-   - Execution Time: 0.000025 seconds
-   -
+![image](https: //github.com/user-attachments/assets/9946c58f-5596-4be7-a0be-a2274391ea74)
 
+**For Array Size 82: **
+Execution Time: 0.0010 seconds
+
+![image](https: //github.com/user-attachments/assets/ae60a189-4013-41ba-becb-873a39c66906)
+
+**For Array Size 102: **
+Execution Time: 0.0014 seconds
+
+![image](https: //github.com/user-attachments/assets/41cd33d0-9d94-4d15-abd8-1549637452ac)
